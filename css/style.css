@@ -1,1 +1,244 @@
+/* ==========================================
+   TEMA PERSONALIZZATO JACGIGI2 GECKOS 
+   ========================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0e12; /* Nero profondo per far risaltare i morph */
+    color: #e2e4e9;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header / Intestazione */
+header {
+    background-color: #050507;
+    text-align: center;
+    padding: 50px 0 30px 0;
+    border-bottom: 3px solid #ffaa00; /* Arancione vivo come il geco del tuo logo */
+}
+
+/* Stile per l'immagine del tuo logo */
+.logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Lo rende tondo come su Instagram */
+    border: 3px solid #ffaa00;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.3);
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #ffaa00; 
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Navigazione */
+nav {
+    margin-top: 25px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffaa00;
+}
+
+/* Sezioni del sito (Card) */
+.card {
+    background-color: #15171e;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    border: 1px solid #222531;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.section-title {
+    color: #ffaa00;
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+/* Griglia per i Gechi */
+.gecko-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Scheda del singolo geco */
+.gecko-card {
+    background-color: #15171e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222531;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gecko-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffaa00; /* La scheda si illumina quando ci passi sopra con il mouse */
+}
+
+/* Box grigio temporaneo se manca la foto */
+.gecko-image-placeholder {
+    width: 100%;
+    height: 240px;
+    background-color: #222531;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #57606f;
+    font-weight: bold;
+}
+
+/* Stile per le foto reali dei gechi */
+.gecko-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.gecko-info {
+    padding: 20px;
+}
+
+.gecko-info h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.gecko-info p {
+    font-size: 0.95rem;
+    color: #a4b0be;
+    margin-bottom: 6px;
+}
+
+.price {
+    display: block;
+    font-size: 1.5rem;
+    color: #ffaa00; /* Prezzo evidenziato con il colore del logo */
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+}
+
+/* Bottone Compra / Chiedi Info */
+.btn-buy {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #ffaa00;
+    border: 2px solid #ffaa00;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: #ffaa00;
+    color: #0d0e12;
+}
+
+/* Gestione gechi già VENDUTI */
+.gecko-card.sold {
+    opacity: 0.4; /* Rende la scheda semi-trasparente */
+}
+
+.gecko-card.sold:hover {
+    border-color: #222531;
+    transform: none;
+}
+
+.price-sold {
+    display: block;
+    font-size: 1.1rem;
+    color: #ff4757; /* Rosso per il testo "VENDUTO" */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+/* Sezione Contatti e Pulsanti Social */
+.text-center { 
+    text-align: center; 
+}
+
+.contact-links {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Effetto ingrandimento al passaggio del mouse */
+}
+
+/* Sfumatura ufficiale di Instagram */
+.btn-instagram { 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+}
+
+.btn-email { 
+    background-color: #2f3542; 
+    border: 1px solid #57606f;
+}
+
+/* Piè di pagina */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #050507;
+    color: #57606f;
+    font-size: 0.85rem;
+    margin-top: 60px;
+    border-top: 1px solid #15171e;
+}
